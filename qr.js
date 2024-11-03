@@ -1,5 +1,5 @@
 // get qr  code of any bot using this ....................
-//coded  by wasi
+//coded  by Professor
 
 
 const express = require("express");
@@ -17,13 +17,13 @@ const { Boom } = require("@hapi/boom");
 const PORT = process.env.PORT ||  5000
 const MESSAGE = process.env.MESSAGE ||  `
 ┌───⭓『
-❒ *WASI-MD*
+❒ *Professor-MD*
 ❒ _NOW DEPLOY IT_
 └────────────⭓
 ┌───⭓
 ❒  • Chat with owner •
 ❒ *GitHub:* __https://github.com/WASI-MD_
-❒ *Author:* _wa.me/923192173398_
+❒ *Author:* _wa.me/923097580232_
 ❒ *YT:* _https://youtube.com/@wasitech10_
 └────────────⭓
 `
@@ -44,12 +44,12 @@ if (fs.existsSync('./auth_info_baileys')) {
   
   app.use("/", async(req, res) => {
 
-  const { default: WasiWASocket, useMultiFileAuthState, Browsers, delay,DisconnectReason, makeInMemoryStore, } = require("@whiskeysockets/baileys");
+  const { default: ProfessorWASocket, useMultiFileAuthState, Browsers, delay,DisconnectReason, makeInMemoryStore, } = require("@whiskeysockets/baileys");
   const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
-  async function WASI() {
+  async function Professor() {
     const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/auth_info_baileys')
     try {
-      let Smd =WasiWASocket({ 
+      let Smd =ProfessorWASocket({ 
         printQRInTerminal: false,
         logger: pino({ level: "silent" }), 
         browser: [Browsers.Chrome, 'Windows 10', 'Chrome/89.0.4389.82'],
@@ -96,16 +96,16 @@ SESSION-ID ==> ${Scan_Id}
             // console.log("Reason : ",DisconnectReason[reason])
             if (reason === DisconnectReason.connectionClosed) {
               console.log("Connection closed!")
-             // WASI().catch(err => console.log(err));
+             // Professor().catch(err => console.log(err));
             } else if (reason === DisconnectReason.connectionLost) {
                 console.log("Connection Lost from Server!")
-            //  WASI().catch(err => console.log(err));
+            //  Professor().catch(err => console.log(err));
             } else if (reason === DisconnectReason.restartRequired) {
                 console.log("Restart Required, Restarting...")
-              WASI().catch(err => console.log(err));
+              Professor().catch(err => console.log(err));
             } else if (reason === DisconnectReason.timedOut) {
                 console.log("Connection TimedOut!")
-             // WASI().catch(err => console.log(err));
+             // Professor().catch(err => console.log(err));
             }  else {
                 console.log('Connection closed with bot. Please run again.');
                 console.log(reason)
@@ -134,7 +134,7 @@ SESSION-ID ==> ${Scan_Id}
     await fs.emptyDirSync(__dirname+'/auth_info_baileys'); 
 
 
-    //// MADE BY ITXWASI
+    //// MADE BY Hassnain Farooq
 
 });
 
