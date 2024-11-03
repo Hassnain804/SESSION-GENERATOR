@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/giftech-web-cpanel/home/wabots-session/public_html/
+    - export DEPLOYPATH=/Professor-web-cpanel/home/wabots-session/public_html/
     - /bin/cp -R images $DEPLOYPATH
     
